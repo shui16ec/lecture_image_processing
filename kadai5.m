@@ -3,7 +3,7 @@
 % 下記はサンプルプログラムである．
 % 課題作成にあたっては「Lenna」以外の画像を用いよ．
 
-ORG=imread('Lenna.png'); % 原画像の入力
+ORG=imread('Rename1.jpg'); % 原画像の入力
 ORG = rgb2gray(ORG); % カラー画像を白黒濃淡画像へ変換
 imagesc(ORG); colormap(gray); colorbar;
 pause;
@@ -26,8 +26,8 @@ sigma_B = (n1 *(myu1-myu_T)^2+n2*(myu2-myu_T)^2)/(n1+n2); %クラス間分散の算出
 if max_val<sigma_B/sigma_w
 max_val = sigma_B/sigma_w;
 max_thres =i;
-end;
-end;
+end
+end
 
 IMG = ORG > max_thres;
 imagesc(IMG); colormap(gray); colorbar;
